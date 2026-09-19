@@ -1,32 +1,32 @@
 #include <stdio.h>
  
-int maior2(int a, int b) {
+int bigger2(int a, int b) {
     if (a >= b){
         return a;
     }
     return b;
 }
  
-int maior3(int a, int b, int c) {
-    int maior = 0;
+int bigger3(int a, int b, int c) {
+    int bigger = 0;
 
     if (a >= b){
-        maior = a;
-    } else { maior = b;}
-    if (maior >= c){
-        return maior;
+        bigger = a;
+    } else { bigger = b;}
+    if (bigger >= c){
+        return bigger;
     } return c;
 }
  
 int main() {
-    int a, b, c, maior;
+    int a, b, c, bigger;
     // input
     printf("Type the values of a, b and c: ");
     scanf("%d %d %d", &a, &b, &c);
     // processing
-    maior = maior3(a, b, c);
+    bigger = bigger3(a, b, c);
     // output
-    printf("%d is the largest value.\n", maior);
+    printf("%d is the largest value.\n", bigger);
  
     return 0;
 }

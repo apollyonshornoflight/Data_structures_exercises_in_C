@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int quadrado(int x){
+int square_r(int x){
 
     x = x*x;
     return x;
@@ -16,10 +16,10 @@ int main()
     scanf("%d", &x);
 
     // Processing 
-    square = quadrado(x);
+    square = square_r(x);
 
     //Output
-    printf("the square of %d is %d.\n", x, square);
+    printf("The square of %d is %d.\n", x, square);
 
     return 0;
 }
