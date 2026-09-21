@@ -12,7 +12,6 @@ int main()
         fahrenheit = (i * 9 / 5) + 32;
         printf("%d Celsius in Fahrenheit is %d\n",i,fahrenheit);
     }
-    
 
     return 0;
 }
