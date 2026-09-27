@@ -29,7 +29,7 @@ int main()
     }
 
     //Output
-    printf("The value of %d times %d is %d.\n",x,n,power);
+    printf("The value of %d power %d is %d.\n",x,n,power);
     return 0;
 }
 
