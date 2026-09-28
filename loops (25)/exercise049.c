@@ -4,7 +4,7 @@ int main()
 {
     int big_sal = 0, avg_c = 0, avg_s = 0, sum_c = 0, sum_s = 0, total = 1, c, s, percent;
     float upto_100 = 0;
-    char condition;
+    char condition = 'Y';
 
 
     // Processing 
@@ -36,9 +36,9 @@ int main()
     }
 
     //Output
-    printf("\nThe average salary is R$%.2d\n",avg_s);
+    printf("\nThe average salary is R$%d.00\n",avg_s);
     printf("The average number of children is %d per home\n",avg_c);
-    printf("The highest salary sis R$%.2d\n",big_sal);
+    printf("The highest salary sis R$%d.00\n",big_sal);
     percent = (upto_100/(total - 1))  * 100;
     printf("The percentage of people with the salary above R$100.00 is %d%%\n",percent);
 
