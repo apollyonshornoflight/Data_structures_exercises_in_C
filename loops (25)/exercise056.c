@@ -24,10 +24,6 @@ int main(){
     //Output
     printf("The sum of the digits of the number %d is %d\n", n,sum);
 
-
-
-    
-
     return 0;
 }
 
