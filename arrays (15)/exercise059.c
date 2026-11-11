@@ -2,27 +2,36 @@
 
 int main(){
 
-    int n,average,sum;
+    int n,sum = 0;
     //Input
     printf("Type the array size: ");
-    scanf("%d",&size);
+    scanf("%d",&n);
 
     //Processing
-    int v[size];
+    int v[n],s[n];
 
-    for (int i = 0; i < size; i++)
+    for (int i = 0; i < n; i++)
     {
         printf("Type the value %d: ",i);
-        scanf("%d",&array[i]);
+        scanf("%d",&v[i]);
     }
-    for (int i = 0; i < size; i++)
+    for (int i = 0; i < n; i++)
     {
-        sum += array[i];
-    } average = sum / size;
-    
+        sum += v[i];
+        s[i] = sum;
+    } 
     //Output
-    printf("\nThe average of these numbers is %d\n", average);
+    printf("\nThe first array is: ");
 
+    for (int i = 0; i < n; i++){
+        printf("%d ", v[i]);
+    }
+    printf("\n");
+    printf("And the second one is: ");
+    for (int i = 0; i < n; i++){
+        printf("%d ", s[i]);
+    }
+    printf("\n");
     return 0;
 }
 
