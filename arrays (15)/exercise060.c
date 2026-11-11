@@ -11,7 +11,7 @@ int main(){
     //Processing
     printf("Enter real values (insert a negative value in order to stop):\n");
 
-    for (int i = 0; value >= 0 && count < 100; i++) 
+    for (int i = 0; value >= 0 && count < MAX; i++) 
     {
         scanf("%lf", &value);
         if (value >= 0) {
