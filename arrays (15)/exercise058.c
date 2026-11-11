@@ -2,7 +2,7 @@
 
 int main(){
 
-    int size,average,sum;
+    int size,average,sum = 0;
     //Input
     printf("Type the array size: ");
     scanf("%d",&size);
