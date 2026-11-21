@@ -1,46 +1,41 @@
 #include <stdio.h>
 
-void unique(int v1[], int n, *idxmin){
+void shift_zeros(int v1[], int n, int *idxmin){
     int size = 0;
-    int v2[n];
     for (int i = 0; i < n; i++)
     {
-        int flag = 0;
-        for (int j = 0; j < size; j++)
-        {
-            if (v1[i] == v2[j] || v1[i] == 0) {flag = 1; break;}
-        }
-        if (flag == 0){
-            v2[size] = v1[i];
+        if (v1[i] != 0){
+            v1[size] = v1[i];
             size++;
         }
     }
-    for (int j = size; j < n; j++) v2[j] = 0;
+    for (int j = size; j < n; j++) v1[j] = 0;
+    *idxmin = size;
 }
 
 int main(void){
-    int n;
+    int n, idxmin = 0;
 
     //Input
     printf("Insert the array size: ");
     scanf("%d",&n);
 
-    int v1[n],v2[n];
+    int v1[n];
     printf("Type the elements of the array:\n");
     for (int i = 0; i < n; i++) scanf("%d", &v1[i]);
 
-    //Processing
-    unique(v1, v2, n);
-
-    //Output
-    printf("Array 1:\n");
+    printf("Array 1 before:\n");
     printf("{ ");
     for (int i = 0; i < n; i++) printf("%d ", v1[i]);
     printf("}\n");
+  
+    //Processing
+    shift_zeros(v1,n, &idxmin);
 
-    printf("Array 2:\n");
+    //Output
+    printf("Array 1 with the 0's shifted:\n");
     printf("{ ");
-    for (int i = 0; i < n; i++) printf("%d ", v2[i]);
+    for (int i = 0; i < n; i++) printf("%d ", v1[i]);
     printf("}\n");
 
 }
