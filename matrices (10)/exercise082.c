@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main(void){
-    int n_lin,n_col,minimax;
+    int n_lin,n_col, maxI = 0, minJ = 0;
 
     //Input
     printf("Insert the number of lines: ");
@@ -19,7 +19,8 @@ int main(void){
         scanf("%d", &m[i][j]);
       }
     }
-  
+    int max = m[0][0];
+
     for(int i = 0; i < n_lin; i++){
       printf("{ ");
       for(int j = 0; j < n_col; j++){
@@ -30,17 +31,19 @@ int main(void){
 
     //Processing
     for(int i = 0; i < n_lin; i++){
-      for(int j = 0;)
-    }
-    //Output
-    printf("Matrix P:\n");
-    for(int i = 0; i < m; i++){
-      printf("{ ");
-      for(int j = 0; j < o; j++){
-        printf("%d ", P[i][j]);
+      for(int j = 0; j < n_col; j++){
+        if (m[i][j] > max) {max = m[i][j]; maxI = i;}
       }
-      printf(" }\n");
     }
+
+    int minimax = m[maxI][0];
+
+    for(int j = 0; j < n_col; j++){
+      if (m[maxI][j] < minimax) {minimax = m[maxI][j]; minJ = j;};
+    }
+
+    //Output
+    printf("The minimax of this matrix is %d, and is located in [%d][%d]\n", minimax,maxI,minJ);
   
   return 0;
 }
